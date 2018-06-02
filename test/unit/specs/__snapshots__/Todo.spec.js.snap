@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo should match snapshot 1`] = `
+<div
+  class="todo"
+>
+  <div
+    class="row"
+  >
+    <div
+      class="col-md-1 control"
+    >
+      <label
+        class="control control-checkbox"
+      >
+        <input
+          class="finish"
+          type="checkbox"
+        />
+         
+        <div
+          class="control_indicator"
+        />
+      </label>
+    </div>
+     
+    <div
+      class="col-md-6"
+    >
+      <h3
+        class="title"
+        title="My awesome task"
+      >
+        Task 1
+      </h3>
+    </div>
+     
+    <div
+      class="col-md-3"
+    >
+      <span>
+        June 2, 2018
+      </span>
+    </div>
+     
+    <div
+      class="col-md-2 text-right"
+    >
+      <button
+        class="remove btn btn-danger"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+`;

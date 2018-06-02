@@ -1,0 +1,27 @@
+<div class="todoView">
+
+  <header class="header text-center">
+    <h1>{{ date.getDay() | day }}</h1>
+    <h2>{{ date.getMonth() | month }} {{ date.getDate() }}, {{ date.getFullYear() }}</h2>
+  </header>
+
+  <!-- List of todos. -->
+  <div class="todos">
+    <todo
+      v-for="(todo, key) in todos"
+      v-if="!todo.deleted"
+      :key="key"
+      :title="todo.title"
+      :description="todo.description"
+      :finished="todo.finished"
+      :dueDate="todo.dueDate"
+
+      @finished="finish(key)"
+      @removed="remove(key)">
+    </todo>
+  </div>
+
+  <footer>
+    <button @click="create" class="btn btn-success btn-sm">Add</button>
+  </footer>
+</div>
