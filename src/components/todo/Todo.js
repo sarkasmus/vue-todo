@@ -26,6 +26,10 @@ export default {
 
     remove () {
       this.$emit('removed')
+    },
+
+    edit () {
+      this.$emit('edited')
     }
   },
   filters: {

@@ -17,11 +17,12 @@
       :dueDate="todo.dueDate"
 
       @finished="finish(key)"
-      @removed="remove(key)">
+      @removed="remove(key)"
+      @edited="$router.push('edit/' + key)">
     </todo>
   </div>
 
   <footer>
-    <button @click="create" class="btn btn-success btn-sm">Add</button>
+    <router-link to="/create"><button class="btn btn-success btn-sm">Add</button></router-link>
   </footer>
 </div>

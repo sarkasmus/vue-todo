@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo should match snapshot 1`] = `
+<div
+  class="todo-edit"
+>
+  <header
+    class="header text-center"
+  >
+    <h1>
+      Create
+    </h1>
+  </header>
+   
+  <div
+    class="form"
+  >
+    <div
+      class="form-group"
+    >
+      <input
+        class="prop-title form-control"
+        placeholder="Title"
+      />
+    </div>
+     
+    <div
+      class="form-group"
+    >
+      <textarea
+        class="description form-control"
+        placeholder="Description for a todo"
+      />
+    </div>
+     
+    <div
+      class="form-group"
+    >
+      <input
+        class="dueDate form-control"
+        placeholder="Date"
+        type="date"
+      />
+    </div>
+  </div>
+   
+  <footer>
+    <button
+      class="save btn btn-info"
+      disabled="disabled"
+    >
+      Save
+    </button>
+  </footer>
+</div>
+`;
+
+exports[`Todo should match snapshot 2`] = `
+<div
+  class="todo-edit"
+>
+  <header
+    class="header text-center"
+  >
+    <h1>
+      Create
+    </h1>
+  </header>
+   
+  <div
+    class="form"
+  >
+    <div
+      class="form-group"
+    >
+      <input
+        class="prop-title form-control"
+        placeholder="Title"
+      />
+    </div>
+     
+    <div
+      class="form-group"
+    >
+      <textarea
+        class="description form-control"
+        placeholder="Description for a todo"
+      />
+    </div>
+     
+    <div
+      class="form-group"
+    >
+      <input
+        class="dueDate form-control"
+        placeholder="Date"
+        type="date"
+      />
+    </div>
+  </div>
+   
+  <footer>
+    <button
+      class="save btn btn-info"
+      disabled="disabled"
+    >
+      Save
+    </button>
+  </footer>
+</div>
+`;

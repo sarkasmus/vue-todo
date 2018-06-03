@@ -1,0 +1,24 @@
+<div class="todo-edit">
+  <header class="header text-center">
+    <h1>{{ $route.name | capitalize }}</h1>
+  </header>
+
+  <!-- List of todos. -->
+  <div class="form">
+    <div class="form-group">
+      <input class="prop-title form-control" v-model="title" placeholder="Title">
+    </div>
+
+    <div class="form-group">
+      <textarea class="description form-control" placeholder="Description for a todo" v-model="description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <input type="date" class="dueDate form-control" v-model="dueDate" placeholder="Date">
+    </div>
+  </div>
+
+  <footer>
+    <button class="save btn btn-info" @click="save" :disabled="!(title.length > 3 && description.length > 5 && Date.parse(dueDate) > 0)">Save</button>
+  </footer>
+</div>

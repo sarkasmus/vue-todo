@@ -25,20 +25,20 @@ describe('Todo', () => {
 
     getters = {
       todos () {
-        return {
-          0: {
+        return [
+          {
             title: 'Task 1',
             description: 'My awesome task',
             finished: false,
             dueDate: '2018-06-02'
           },
-          3: {
+          {
             title: 'Task 2',
             description: 'My awesome task',
             finished: true,
             dueDate: '2018-06-03'
           }
-        }
+        ]
       }
     }
 
@@ -56,7 +56,8 @@ describe('Todo', () => {
         $router: router
       },
       store,
-      localVue
+      localVue,
+      stubs: ['router-link']
     })
   })
 

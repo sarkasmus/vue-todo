@@ -16,8 +16,12 @@ export default new Vuex.Store({
       commit('REMOVE', id)
     },
 
-    create ({commit}) {
-      commit('CREATE')
+    create ({commit}, payload) {
+      commit('CREATE', payload)
+    },
+
+    edit ({commit}, payload) {
+      commit('EDIT', payload)
     }
   },
   getters: {
@@ -38,8 +42,20 @@ export default new Vuex.Store({
       state.todos[id].deleted = true
     },
 
-    CREATE (state) {
-      // ...
+    CREATE (state, payload) {
+      state.todos.push({
+        title: payload.title,
+        description: payload.description,
+        finished: false,
+        dueDate: payload.dueDate,
+        deleted: false
+      })
+    },
+
+    EDIT (state, payload) {
+      state.todos[payload.id].title = payload.title
+      state.todos[payload.id].description = payload.description
+      state.todos[payload.id].dueDate = payload.dueDate
     }
   },
   state: {

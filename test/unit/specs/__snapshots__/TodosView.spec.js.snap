@@ -24,11 +24,7 @@ exports[`Todo should match snapshot 1`] = `
   </div>
    
   <footer>
-    <button
-      class="btn btn-success btn-sm"
-    >
-      Add
-    </button>
+    <!---->
   </footer>
 </div>
 `;

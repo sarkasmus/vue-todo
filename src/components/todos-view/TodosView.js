@@ -13,7 +13,7 @@ export default {
     }
   },
   computed: {
-    todos () {
+    todos () : Array<{title: string, description: string, finished: boolean, dueDate: string}> {
       return this.$store.getters.todos
     }
   },
@@ -24,14 +24,10 @@ export default {
 
     remove (id: number) : void {
       this.$store.dispatch('remove', id)
-    },
-
-    create () : void {
-      // ...
     }
   },
   filters: {
-    day (day: number) {
+    day (day: number) : string {
       let days = [
         'Sunday',
         'Monday',
@@ -45,7 +41,7 @@ export default {
       return days[day]
     },
 
-    month (month: number) {
+    month (month: number) : string {
       let months = [
         'January',
         'February',
